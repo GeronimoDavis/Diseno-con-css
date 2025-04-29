@@ -1,0 +1,112 @@
+/* Variables CSS o custom properties */
+:root{
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris : #757575;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 16px;/* 10px = 1rem */
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2.5rem;
+}
+h3{
+    font-size: 2rem;
+}
+h1, h2, h3{
+    text-align: center;
+}
+
+.titulo span{
+    font-size: 2rem;
+}
+
+.navegacion_principal{
+    display: flex;
+    flex-direction: column;
+    
+}
+@media (min-width: 768px){
+    .navegacion_principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.navegacion_principal a{
+    color: var(--blanco);
+    text-decoration: none;
+    font-size:  2rem;
+    padding: 1rem 1rem;
+}
+
+.contenedor{
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+.nav-bg{
+    background-color: var(--secundario);
+}
+
+.navegacion_principal a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+.hero{
+    background-image: url("../imagenes/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45rem;
+    position: relative;
+} 
+
+.contenedor-hero{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.704);
+    height: 100%;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor-hero h2, .contenedor-hero p{
+    color: var(--blanco);
+}
+
+.contenedor-hero svg{
+    width: 10rem;
+    height: 10rem;
+}
+
+.boton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 2rem;/* alto y ancho del boton */
+    margin-top: 1rem;/* separacion de otros elementos */
+    font-size: 2rem;
+    text-decoration: none;/* sin subrayado */
+}
