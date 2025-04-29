@@ -21,6 +21,7 @@ body{
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
+    background-image: linear-gradient(to top, #dfe9f3 0%, var(--blanco) 100%);
 }
 
 h1{
@@ -109,4 +110,15 @@ h1, h2, h3{
     margin-top: 1rem;/* separacion de otros elementos */
     font-size: 2rem;
     text-decoration: none;/* sin subrayado */
+    text-transform: uppercase;/* todo en mayusculas */
+    font-weight: 700;/* negrita */
+    border-radius: .5rem;/* bordes redondeados */
+    width: 30%;
+    text-align: center;
+}
+
+@media (min-width: 480px){
+    .boton{
+       width: auto;
+    }
 }
