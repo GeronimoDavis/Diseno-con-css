@@ -10,6 +10,15 @@
 html{
     font-size: 62.5%;
     box-sizing: border-box;
+    scroll-snap-type: y mandatory;/* scroll suave */
+}
+
+/* scroll snap */
+.servicios, 
+.navegacion_principal,
+.formulario{
+    scroll-snap-align: center;/* al hacer scroll, el elemento se alinea al centro */
+    scroll-snap-stop: always;/* siempre se detiene en el elemento */
 }
 
 *, *:before, *:after{
@@ -65,6 +74,7 @@ h1, h2, h3{
     margin: 0 auto;
 }
 
+
 .nav-bg{
     background-color: var(--secundario);
 }
@@ -117,6 +127,7 @@ h1, h2, h3{
     border-radius: .5rem;/* bordes redondeados */
     width: 30%;
     text-align: center;
+    border: none;/* quitar borde */
 }
 
 @media (min-width: 480px){
@@ -125,6 +136,14 @@ h1, h2, h3{
     }
 }
 
+.boton:hover{
+    background-color: var(--primario);
+    color: var(--oscuro);
+    cursor: pointer;/* cambiar el cursor al pasar por encima */
+}
+
+
+/* servicios */
 .sombra{
     box-shadow: -3px 4px 5px 6px rgba(0,0,0,0.55);/* sombra del contenedor */
     background-color: var(--blanco);
@@ -148,18 +167,88 @@ h1, h2, h3{
    
 }
 
-.servicios{
-
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.servicios h3{
-
+.servicio h3{
+    font-size: 2rem;
+    margin: 0;/* quitar margen */
+    padding: 1rem 0;/* separacion entre el borde y el contenido */
+    color: var(--oscuro);
+    text-transform: uppercase;/* todo en mayusculas */
+    font-weight: 700;/* negrita */
 }
 
-.servicios .icono{
+.servicio p{
+    line-height: 2;
+    text-align: center;
+
+   
+}
+
+.servicio .icono svg{
+    width: 5rem;
+    height: 5rem;
+}
+.servicio .icono{
     height: 15rem;
     width: 15rem;
     background-color: var(--primario);
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
+}
+/* Contacto */
+.formulario{
+    background-color: var(--gris);
+    width: min(60rem, 100%);/* ancho maximo 60rem y minimo 100% */
+    margin: 0 auto;/* centrar */
+    padding: 2rem;/* separacion entre el borde y el contenido */
+    border-radius: 2rem;/* bordes redondeados */
+}
+
+.formulario fieldset{
+    border: none;/* quitar borde */
+}
+
+.formulario legend{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;/* separacion entre el borde y el contenido */
+    text-transform: uppercase;/* todo en mayusculas */
+    color: var(--primario);
+  
+}
+
+
+.contenedor-campo{
+    margin-bottom: 1rem;/* separacion entre el borde y el contenido */
+}
+
+.campo {
+
+
+}
+
+.campo label{
+    font-weight: 700;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.input-text{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.campo-enviar .boton{
+    text-align: center;
+    width: 100%;
 }
