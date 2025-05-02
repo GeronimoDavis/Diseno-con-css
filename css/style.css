@@ -16,7 +16,8 @@ html{
 /* scroll snap */
 .servicios, 
 .navegacion_principal,
-.formulario{
+.formulario,
+footer{
     scroll-snap-align: center;/* al hacer scroll, el elemento se alinea al centro */
     scroll-snap-stop: always;/* siempre se detiene en el elemento */
 }
@@ -225,13 +226,40 @@ h1, h2, h3{
   
 }
 
+@media (min-width: 768px){
+    .contenedor-campos{
+        display: grid;
+        grid-template-columns: 50% 50%;/* 2 columnas de igual tamaño */
+        grid-template-rows: auto auto 20rem;/* 3 filas de auto tamaño */
+        column-gap: 2rem;/* espacio entre columnas */
+       
+    }
 
-.contenedor-campo{
-    margin-bottom: 1rem;/* separacion entre el borde y el contenido */
+    .campo:nth-child(3){
+        grid-column: 1/3;/* ocupar 2 columnas */
+    }
+
+    .campo:nth-child(4){
+        grid-column: 1/3;/* ocupar 2 columnas de la una a la 3 */
+    }
 }
 
-.campo {
+.campo{
+    margin-bottom: 2rem;/* separacion entre el borde y el contenido */
+    position: relative;/* posicion relativa para el icono */
+}
+.campo textarea{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    resize: none;/* quitar el resize */
 
+    /* que no se pueda redimensionar */
+    min-height: 10rem;/* alto minimo */
+    max-height: 20rem;/* alto maximo */
+    max-width: 100%;/* ancho maximo */
+    min-width: 100%;/* ancho minimo */
 
 }
 
@@ -251,4 +279,13 @@ h1, h2, h3{
 .campo-enviar .boton{
     text-align: center;
     width: 100%;
+    margin-top: 5rem;/* separacion de otros elementos */
+}
+
+.footer{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 0;/* separacion entre el borde y el contenido */
+    text-align: center;
+    margin-top: 5rem ;
 }
